@@ -1,0 +1,47 @@
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		$('a').mouseover(function(){
+            //alert("i am click");
+            var selected= $(this);
+            $('a').removeClass('active');
+            $(selected).addClass('active');
+		});
+
+        var $a = $('.a'),
+        $b = $('.b'),
+        $c = $('.c'),
+        $d = $('.d'),
+        $Sikkim = $('.Sikkim'),
+        $Gaya = $('.Gaya'),
+        $IIITDM = $('.IIITDM'),
+        $Aaroha= $('.Aaroha');
+
+        $a.mouseover(function(){
+        	$Sikkim.fadeIn();
+        	$Gaya.fadeOut();
+        	$IIITDM.fadeOut();
+        	$Aaroha.fadeOut();
+        });
+        $b.mouseover(function(){
+        	$Gaya.fadeIn();
+        	$Sikkim.fadeOut();
+        	$IIITDM.fadeOut();
+        	$Aaroha.fadeOut();
+        });
+        $c.mouseover(function(){
+        	$IIITDM.fadeIn();
+            $Sikkim.fadeOut();
+            $Gaya.fadeOut();
+        	$Aaroha.fadeOut();
+        });
+        $d.mouseover(function(){
+        	$Aaroha.fadeIn();
+        	$Sikkim.fadeOut();
+        	$Gaya.fadeOut();
+        	$IIITDM.fadeOut();
+        });
+
+	});
+</script>
